@@ -1,0 +1,29 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 5vh;
+    background: #241215;
+    color: #dfcecf;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Arial', sans-serif;
+}
+
+.code {
+    font-family: 'Source Code Pro', monospace;
+}
+
+h1 {
+    font-size: 8vh;
+}
+
+ul {
+    margin: 6vh;
+}
+
+.imageSlide img{
+    display: block;
+    margin: auto;
+    height: 100%;
+    width: auto;
+}
