@@ -1,9 +1,17 @@
 # Something something PyTorch
 
 # Polite phrase + respect phrase
+Hi, and welcome to my talk entitled "Fantastic gradients and where to find them". I am happy to see all of you here, and that you also find deep learning enough faschinating to spend your tuesday evening hopefully improving your skills withing the field. Are anyone of you currently working on a deep learning project, on your spare time or for your studies/work? 
 
 # Attention grabber
-_Google trends? Some quote about TensorFlow being estimated as the market leader for at least five years - yet PyTorch is cathing up and from the looks of it are about to beat the crap out of TensorFlow_
+
+...great, who are already working in PyTorch? Who are working in TensorFlow? Any other frameworks? Keras?
+
+Cool, choosing the right framework for your task might be an important factor for your success, and there are many frameworks to choose from. (pic). (some comments, these are mainly frameworks backed by big corporations. And Theano for some reason.)
+
+...okay but the choice should be easy - just stick with the market leader, right? See here, it's TensorFlow (stats pic). These are all probably microsoft employees right? (Point to CNTK bar).
+
+And yet this is what happened since PyTorch was introduced (trends pic). This is why I am here.
 
 # Subject/agenda
 The purpose of this session is to get familiar with Pytorch
@@ -18,16 +26,16 @@ The purpose of this session is to get familiar with Pytorch
 I currently work with deep learning systems at Tobii. Since I discovered PyTorch one and a half year ago, I've used it in many projects. I have trained LSTMs for predicting scores of yelp reviews, bult GANs and VAEs for image generation systems. I have trained gaze prediction systems in Torch at Tobii, even though my current project uses TensorFlow, and I have done some other minor projects and prototypes in it.
 
 # Practical info
-This is a small informal introduction to PyTorch, pleas ask any questions that come up as we go. Let's begin with some history to get some perspectibe on where we are.
+This is a small informal introduction to PyTorch. I will refer a lot to TensorFlow for comparisons as it is the current market leader. Pleas ask any questions as we go.
 
-# Content #1: History, Deep Learning Frameworks - a game of thrones
-# Content #2: Basics - fantastic gradients and where to find them (or from Numpy to Torch)
+# Content #1: Basics - fantastic gradients and where to find them (or from Numpy to Torch)
 _Going from building a neural network in numpy to doing the same thing in Torch, emphasize that the only real difference is that the gradients are easier to get and you can do stuff on the gpu_
 _Nag about how some deep learning frameworks (TensorFlow, TF.js, CNTK etc.) hide gradients from you. This is a bad abstraction, since gradients are the one thing (litteraly the ONE THING, except for some linear algebra and stuff of course) you need to build amazing neural networks_
-# Content #3: Building complex models - best practices and utilities
-# Content #4: Going crazy, try doing this in tensorflow
+
+# Content #2: Building complex models - best practices and utilities
+# Content #3: Going crazy, try doing this in tensorflow
 _Show what you get with the freedom of torch. Candidate: FC network with random depth and masked out gradients_
-# Content #5: Making it real, going C++ and/or distributed
+# Content #4: Making it real, going C++ and/or distributed
 _Yeh this seems nice but I need it to go fast and distributed! -Mention the C++ api and the support for distributed training. Facebook uses PyTorch in production. (Quote Yann LeCun to get some extra ethos?)_
 _Also mention portability/ONNX_
 

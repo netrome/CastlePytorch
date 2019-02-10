@@ -1,12 +1,22 @@
 body {
     font-family: 'Nunito', sans-serif;
     font-size: 5vh;
+    font-weight: 100;
     background: #241215;
     color: #dfcecf;
+    background-image: url("https://pytorch.org/assets/images/home-background.jpg");
+    background-image: url("http://localhost:5000/static/pytorch-background.jpg");
+}
+
+#root {
+    margin: 5% 5%;
+    width: 90vw;
+    height: 80vh;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Nanum Gothic', 'Arial', sans-serif;
+    font-weight: 100;
 }
 
 .code {
@@ -21,9 +31,19 @@ ul {
     margin: 6vh;
 }
 
+.wide{
+    width: 100% !important;
+    height: auto !important;
+}
+
 .imageSlide img{
     display: block;
     margin: auto;
     height: 100%;
     width: auto;
+}
+
+.clock {
+    font-size: 24px;
+    text-align: right;
 }

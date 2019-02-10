@@ -10,9 +10,24 @@ const ImageSlide = utils.ImageSlide;
 
 const presentation = [
     <Intro />,
-    <BulletSlide title="Yo" items={["Hej", "Haj"]} />,
-    <BulletSlide title="Yo flo sho" items={["Hej sho", "Haj"]} />,
-    <ImageSlide src="http://res.cloudinary.com/sagacity/image/upload/c_crop,h_800,w_616,x_0,y_0/c_scale,w_640/v1419879339/iVegJ35_xfjlfu.gif"/>,
+
+    <ImageSlide src="http://localhost:5000/static/frameworks-map.png" />,
+    <ImageSlide src="http://localhost:5000/static/frameworks.png" />,
+
+    <div><br /><br /><br />
+    <ImageSlide src="http://localhost:5000/static/pytorch-tensorflow-trends.png" extras="wide"/>
+    </div>,
+
+    <center><br /><h1><i>Fundamentals</i></h1></center>,
+
+    <BulletSlide title="Ingredients" items={[]} />,
+    <BulletSlide title="Ingredients" items={["Tensors"]} />,
+    <BulletSlide title="Ingredients" items={["Tensors", "GPU Acceleration"]} />,
+    <BulletSlide title="Ingredients" items={["Tensors", "GPU Acceleration", "Gradients"]} />,
+
+    <ImageSlide src="http://localhost:5000/static/static-vs-dynamic.jpg" />,
+
+    <ImageSlide src="http://localhost:5000/static/karpathy.png" extras="wide"/>,
 ];
 
 function displaySlide(index){

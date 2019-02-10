@@ -27,8 +27,10 @@ export class Intro extends React.Component {
     render() {
         return (
             <div>
-            <h1>Hallojsan!</h1>
-            <p>{this.state.date.toLocaleTimeString()}.</p>
+            <h1>Fantastic gradients</h1>
+            <h4>and where to find them.</h4>
+            <br /><br />
+            <p className='clock'>{this.state.date.toLocaleTimeString()}.</p>
             </div>
         );
     }
@@ -50,7 +52,7 @@ export function BulletSlide (props){
 }
 
 export function ImageSlide (props){
-    return <div className="imageSlide"><img src={props.src} /></div>
+    return <div className="imageSlide"><img src={props.src} className={props.extras}/></div>
 }
 
 
