@@ -24601,36 +24601,94 @@ var utils = require("./utils.js");
 var Intro = utils.Intro;
 var BulletSlide = utils.BulletSlide;
 var ImageSlide = utils.ImageSlide;
-var presentation = [_react.default.createElement(Intro, null), _react.default.createElement(ImageSlide, {
+var presentation = [_react.default.createElement(Intro, null), // Attention grabber
+_react.default.createElement(ImageSlide, {
   src: "http://localhost:5000/static/frameworks-map.png"
 }), _react.default.createElement(ImageSlide, {
   src: "http://localhost:5000/static/frameworks.png"
 }), _react.default.createElement("div", null, _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(ImageSlide, {
   src: "http://localhost:5000/static/pytorch-tensorflow-trends.png",
   extras: "wide"
-})), _react.default.createElement("br", null), _react.default.createElement("center", null, _react.default.createElement("br", null), _react.default.createElement("h1", null, _react.default.createElement("i", null, "What makes deep learning hard?"))), _react.default.createElement(BulletSlide, {
-  title: "Frameworks consist of",
+})), // Subject/agenda
+_react.default.createElement(BulletSlide, {
+  title: "Agenda",
   items: []
 }), _react.default.createElement(BulletSlide, {
-  title: "Frameworks consist of",
+  title: "Agenda",
+  items: ["Basics: From Numpy to low level PyTorch"]
+}), _react.default.createElement(BulletSlide, {
+  title: "Agenda",
+  items: ["Basics: From Numpy to low level PyTorch", "High level PyTorch - making ourselves comfortable"]
+}), _react.default.createElement(BulletSlide, {
+  title: "Agenda",
+  items: ["Basics: From Numpy to low level PyTorch", "High level PyTorch - making ourselves comfortable", "Scaling up to production"]
+}), // Objective
+// Build ethos
+// Practical info
+// Begin
+_react.default.createElement("br", null), _react.default.createElement("center", null, _react.default.createElement("br", null), _react.default.createElement("h1", null, _react.default.createElement("i", null, "What makes deep learning hard?"))), _react.default.createElement(BulletSlide, {
+  title: "DL Frameworks consist of",
+  items: []
+}), _react.default.createElement(BulletSlide, {
+  title: "DL Frameworks consist of",
   items: ["Tensors"]
 }), _react.default.createElement(BulletSlide, {
-  title: "Frameworks consist of",
+  title: "DL Frameworks consist of",
   items: ["Tensors", "GPU Acceleration"]
 }), _react.default.createElement(BulletSlide, {
-  title: "Frameworks consist of",
+  title: "DL Frameworks consist of",
   items: ["Tensors", "GPU Acceleration", "Gradients"]
+}), _react.default.createElement(BulletSlide, {
+  title: "Tensors",
+  items: []
+}), _react.default.createElement(BulletSlide, {
+  title: "Tensors",
+  items: ["Similar to Numpy arrays"]
 }), _react.default.createElement(BulletSlide, {
   title: "Tensors",
   items: ["Similar to Numpy arrays", "np.ndarray -> torch.Tensor"]
 }), _react.default.createElement(BulletSlide, {
   title: "GPU acceleration",
+  items: []
+}), _react.default.createElement(BulletSlide, {
+  title: "GPU acceleration",
+  items: ["Explicit: .cuda()"]
+}), _react.default.createElement(BulletSlide, {
+  title: "GPU acceleration",
+  items: ["Explicit: .cuda()", "Upon construction: torch.<some function>(..., device='cuda:0')"]
+}), _react.default.createElement(BulletSlide, {
+  title: "GPU acceleration",
   items: ["Explicit: .cuda()", "Upon construction: torch.<some function>(..., device='cuda:0')", "User responsible for writing device-agnostic code"]
 }), _react.default.createElement(BulletSlide, {
   title: "Gradients",
+  items: []
+}), _react.default.createElement(BulletSlide, {
+  title: "Gradients",
+  items: ["Single most important component of a DL framework"]
+}), _react.default.createElement(BulletSlide, {
+  title: "Gradients",
+  items: ["Single most important component of a DL framework", "Difficult to implement"]
+}), _react.default.createElement(BulletSlide, {
+  title: "Gradients",
   items: ["Single most important component of a DL framework", "Difficult to implement", "A nightmare to debug"]
+}), _react.default.createElement(BulletSlide, {
+  title: "Gradients in PyTorch",
+  items: []
+}), _react.default.createElement(BulletSlide, {
+  title: "Gradients in PyTorch",
+  items: ["Scalar valued functions"]
+}), _react.default.createElement(BulletSlide, {
+  title: "Gradients in PyTorch",
+  items: ["Scalar valued functions", "Computational graph"]
+}), _react.default.createElement(BulletSlide, {
+  title: "Gradients in PyTorch",
+  items: ["Scalar valued functions", "Computational graph", '"Define by run"']
 }), _react.default.createElement(ImageSlide, {
   src: "http://localhost:5000/static/static-vs-dynamic.jpg"
+}), // Example
+_react.default.createElement("center", null, _react.default.createElement("br", null), _react.default.createElement("h1", null, _react.default.createElement("i", null, "Demo: Building a perceptron with two layers"))), // Convenience
+_react.default.createElement(ImageSlide, {
+  src: "http://localhost:5000/static/convenient.jpg"
 }), _react.default.createElement(ImageSlide, {
   src: "http://localhost:5000/static/karpathy.png",
   extras: "wide"
@@ -24660,7 +24718,7 @@ function onKeyDown(e) {
 
 ;
 document.addEventListener('keydown', onKeyDown, false);
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./utils.js":"src/utils.js"}],"../../../../../usr/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./utils.js":"src/utils.js"}],"../../../../usr/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -24687,7 +24745,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40719" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "32921" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
@@ -24829,5 +24887,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},["../../../../../usr/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/main.js"], null)
+},{}]},{},["../../../../usr/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/main.js"], null)
 //# sourceMappingURL=/main.1e43358e.map
