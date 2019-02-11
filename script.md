@@ -18,7 +18,7 @@ The purpose of this session is to get familiar with Pytorch
 
 # Objective
 
-- Learn PyTorch
+- Get properly introduced to PyTorch
 
 Before we begin, perhaps I should introduce myself. I am Mårten Nilsson.
 

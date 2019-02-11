@@ -24687,9 +24687,54 @@ _react.default.createElement("br", null), _react.default.createElement("center",
   src: "http://localhost:5000/static/static-vs-dynamic.jpg"
 }), // Example
 _react.default.createElement("center", null, _react.default.createElement("br", null), _react.default.createElement("h1", null, _react.default.createElement("i", null, "Demo: Building a perceptron with two layers"))), // Convenience
-_react.default.createElement(ImageSlide, {
+_react.default.createElement("div", null, _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(ImageSlide, {
+  src: "http://localhost:5000/static/inception.png",
+  extras: "wide"
+})), _react.default.createElement(BulletSlide, {
+  title: "Making our lives easier",
+  items: []
+}), _react.default.createElement(BulletSlide, {
+  title: "Making our lives easier",
+  items: ["Composable models: torch.nn"]
+}), _react.default.createElement(BulletSlide, {
+  title: "Making our lives easier",
+  items: ["Composable models: torch.nn", "Optimizers: torch.optim"]
+}), _react.default.createElement(BulletSlide, {
+  title: "Making our lives easier",
+  items: ["Composable models: torch.nn", "Optimizers: torch.optim", "Multi threaded data loaders: torch.utils.data"]
+}), _react.default.createElement("center", null, _react.default.createElement("br", null), _react.default.createElement("h1", null, _react.default.createElement("i", null, "Demo: PyTorch in the real world"))), _react.default.createElement(ImageSlide, {
   src: "http://localhost:5000/static/convenient.jpg"
-}), _react.default.createElement(ImageSlide, {
+}), // Final notes
+_react.default.createElement(BulletSlide, {
+  title: "Scaling up",
+  items: []
+}), _react.default.createElement(BulletSlide, {
+  title: "Scaling up",
+  items: ["Native ONNX support"]
+}), // One framework is not always the answer
+_react.default.createElement(BulletSlide, {
+  title: "Scaling up",
+  items: ["Native ONNX support", "Distributed training"]
+}), _react.default.createElement(BulletSlide, {
+  title: "Scaling up",
+  items: ["Native ONNX support", "Distributed training", "C++ front-end"]
+}), // Summary
+_react.default.createElement(BulletSlide, {
+  title: "Summary",
+  items: []
+}), _react.default.createElement(BulletSlide, {
+  title: "Summary",
+  items: ["Easy transition from numpy"]
+}), _react.default.createElement(BulletSlide, {
+  title: "Summary",
+  items: ["Easy transition from numpy", "High control over implementation details"]
+}), _react.default.createElement(BulletSlide, {
+  title: "Summary",
+  items: ["Easy transition from numpy", "High control over implementation details", "State of the art networks in just a few lines of code"]
+}), _react.default.createElement("div", null, _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement(ImageSlide, {
+  src: "http://localhost:5000/static/pytorch-tensorflow-trends.png",
+  extras: "wide"
+})), _react.default.createElement(ImageSlide, {
   src: "http://localhost:5000/static/karpathy.png",
   extras: "wide"
 })];

@@ -65,8 +65,29 @@ const presentation = [
     <center><br /><h1><i>Demo: Building a perceptron with two layers</i></h1></center>,
 
     // Convenience
+    <div><br /><br /><ImageSlide src="http://localhost:5000/static/inception.png" extras="wide" /></div>,
+    <BulletSlide title="Making our lives easier" items={[]}/>,
+    <BulletSlide title="Making our lives easier" items={["Composable models: torch.nn"]} />,
+    <BulletSlide title="Making our lives easier" items={["Composable models: torch.nn", "Optimizers: torch.optim"]} />,
+    <BulletSlide title="Making our lives easier" items={["Composable models: torch.nn", "Optimizers: torch.optim", "Multi threaded data loaders: torch.utils.data"]} />,
+    <center><br /><h1><i>Demo: PyTorch in the real world</i></h1></center>,
     <ImageSlide src="http://localhost:5000/static/convenient.jpg" />,
 
+    // Final notes
+    <BulletSlide title="Scaling up" items={[]}/>,
+    <BulletSlide title="Scaling up" items={["Native ONNX support"]}/>,  // One framework is not always the answer
+    <BulletSlide title="Scaling up" items={["Native ONNX support", "Distributed training"]}/>,
+    <BulletSlide title="Scaling up" items={["Native ONNX support", "Distributed training", "C++ front-end"]}/>,
+
+    // Summary
+    <BulletSlide title="Summary" items={[]}/>,
+    <BulletSlide title="Summary" items={["Easy transition from numpy"]}/>,
+    <BulletSlide title="Summary" items={["Easy transition from numpy", "High control over implementation details"]}/>,
+    <BulletSlide title="Summary" items={["Easy transition from numpy", "High control over implementation details", "State of the art networks in just a few lines of code"]}/>,
+
+    <div><br /><br /><br />
+    <ImageSlide src="http://localhost:5000/static/pytorch-tensorflow-trends.png" extras="wide"/>
+    </div>,
 
     <ImageSlide src="http://localhost:5000/static/karpathy.png" extras="wide"/>,
 ];
