@@ -18,17 +18,16 @@ class NumpyModel:
 
     def forward(self, x):
         self.inp = x
-        self.hidden_inp = sigmoid(x @ self.W1)
+        self.hidden_inp = sigmoid(x.dot(self.W1))
         return sigmoid(self.hidden_inp @ self.W2)
 
     def backward(self, dout):
         d = sigmoid(self.hidden_inp @ self.W2, derivative=True) * dout
         self.dW2 = self.hidden_inp.T * d
-        # and so on...
 
-        #dh2 = self.W2.T * d
-        #d2 = sigmoid(self.inp @ self.W1, derivative=True) @ dh2
-        #self.dW1 = self.inp.T @ d2
+        dh2 = self.W2.T * d
+        d2 = sigmoid(self.inp @ self.W1, derivative=True) * dh2
+        self.dW1 = self.inp.reshape([2, 1]) @ d2
 
 
 def sigmoid2(x):
@@ -55,6 +54,7 @@ if __name__=="__main__":
     torch_model.W1 = torch.from_numpy(np_model.W1)
     torch_model.W2 = torch.from_numpy(np_model.W2)
     torch_model.W2.requires_grad = True
+    torch_model.W1.requires_grad = True
 
     x, y = utils.sample_a_data_point()
 
@@ -76,9 +76,11 @@ if __name__=="__main__":
         dout = 2 * (out - y)
         np_model.backward(dout)
         print(np_model.dW2)
+        print(np_model.dW1)
 
         out = torch_model.forward(torch.from_numpy(x))
         loss = (out - float(y)) ** 2
         loss.backward()
         print(torch_model.W2.grad)
+        print(torch_model.W1.grad)
 
