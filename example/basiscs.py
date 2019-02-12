@@ -26,15 +26,22 @@ class NumpyModel:
         self.dW2 = self.hidden_inp.T * d
         # and so on...
 
+        #dh2 = self.W2.T * d
+        #d2 = sigmoid(self.inp @ self.W1, derivative=True) @ dh2
+        #self.dW1 = self.inp.T @ d2
+
 
 def sigmoid2(x):
-    return 1 / (1 + torch.exp(-x))
+    return 1. / (1. + torch.exp(-x))
 
 
 class TorchModel:
     def __init__(self, hidden_size=10):
         self.W1 = torch.randn(2, hidden_size).double()
         self.W2 = torch.randn(hidden_size, 1).double()
+
+        self.W1.requires_grad = True
+        self.W2.requires_grad = True
 
     def forward(self, x):
         return sigmoid2(sigmoid2(x @ self.W1) @ self.W2)
@@ -44,7 +51,7 @@ if __name__=="__main__":
     np_model = NumpyModel(10)
     torch_model = TorchModel(10)
     
-    # Copy the same data
+    # Let torch model use the same weights
     torch_model.W1 = torch.from_numpy(np_model.W1)
     torch_model.W2 = torch.from_numpy(np_model.W2)
     torch_model.W2.requires_grad = True
@@ -56,6 +63,8 @@ if __name__=="__main__":
 
     out = torch_model.forward(torch.from_numpy(x))
     print(out)
+
+    print("------------------")
 
 
     # Do some training
